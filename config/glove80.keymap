@@ -11,10 +11,11 @@
  *   6 FACTORY_TEST
  *
  * Thumb cluster :
- *   Row5 inner-L : [SYM]  [LCTRL]  [NAV/ESC]
- *   Row5 inner-R : [HYPR] [LGUI]   [RET]
- *   Row6 outer-L : [BSPC] [DEL]    [LALT]
- *   Row6 outer-R : [RALT] [SPACE]  [SYM]
+ *   Row5 inner-L : [LSHFT] [LCTRL] [NAV/ESC]
+ *   Row5 inner-R : [HYPR]  [LGUI]  [RSHFT]
+ *   Row6 outer-L : [BSPC]  [DEL]   [LALT]
+ *   Row6 outer-R : [RALT]  [RET]   [SPACE]
+ *   Row5 pos 0   : GRAVE (²)   Row5 pos 17 : SYM
  *
  * Layer HYPR — maintenir pouce droit + touche :
  *   Shift/Ctrl sont transparents → Super+Shift+X et Super+Ctrl+X marchent
@@ -96,10 +97,12 @@
             &kp TAB        &kp Q     &kp W    &kp E     &kp R     &kp T                                        &kp Y      &kp U   &kp I    &kp O     &kp P     &kp LBKT
             // Row 4 — Home row (12)   ESC  q  s  d  f  g  |  h  j  k  l  m  ù
             &kp ESC        &kp A     &kp S    &kp D     &kp F     &kp G                                        &kp H      &kp J   &kp K    &kp L     &kp SEMI  &kp SQT
-            // Row 5 — Alpha bas + thumbs inner (18)  SHFT  w  x  c  v  b
-            &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B   &mo SYM  &kp LCTRL  &lt NAV ESC   &mo HYPR  &kp LGUI  &kp RET   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+            // Row 5 — Alpha bas + thumbs inner (18)
+            // `  z  x  c  v  b  | LSHFT LCTRL NAV/ESC | HYPR LGUI RSHFT |  n  m  ,  .  /  SYM
+            &kp GRAVE  &kp Z  &kp X  &kp C  &kp V  &kp B   &kp LSHFT  &kp LCTRL  &lt NAV ESC   &mo HYPR  &kp LGUI  &kp RSHFT   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo SYM
             // Row 6 — Modifiers + thumbs outer (16)
-            &magic MAGIC 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT   &kp BSPC  &kp DEL  &kp LALT   &kp RALT  &kp SPACE  &mo SYM   &kp UP  &kp DOWN  &kp RBKT  &kp BSLH  &kp PG_DN
+            // MAGIC HOME END LEFT RIGHT | BSPC DEL LALT | RALT RET SPACE | UP DOWN ] \ PgDn
+            &magic MAGIC 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT   &kp BSPC  &kp DEL  &kp LALT   &kp RALT  &kp RET  &kp SPACE   &kp UP  &kp DOWN  &kp RBKT  &kp BSLH  &kp PG_DN
             >;
         };
 

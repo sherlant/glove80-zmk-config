@@ -95,14 +95,14 @@
             &kp GRAVE      &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                                       &kp N6     &kp N7  &kp N8   &kp N9    &kp N0    &kp MINUS
             // Row 3 — Alpha haut (12)  TAB  a  z  e  r  t  |  y  u  i  o  p  ^
             &kp TAB        &kp Q     &kp W    &kp E     &kp R     &kp T                                        &kp Y      &kp U   &kp I    &kp O     &kp P     &kp LBKT
-            // Row 4 — Home row (12)   ESC  q  s  d  f  g  |  h  j  k  l  m  ù
-            &kp ESC        &kp A     &kp S    &kp D     &kp F     &kp G                                        &kp H      &kp J   &kp K    &kp L     &kp SEMI  &kp SQT
+            // Row 4 — Home row (12)   DEL  q  s  d  f  g  |  h  j  k  l  m  ù
+            &kp DEL        &kp A     &kp S    &kp D     &kp F     &kp G                                        &kp H      &kp J   &kp K    &kp L     &kp SEMI  &kp SQT
             // Row 5 — Alpha bas + thumbs inner (18)
             // `  z  x  c  v  b  | LSHFT LCTRL NAV/ESC | HYPR RCTRL RSHFT |  n  m  ,  .  /  SYM
             &kp GRAVE  &kp Z  &kp X  &kp C  &kp V  &kp B   &kp LSHFT  &kp LCTRL  &lt NAV ESC   &mo HYPR  &kp RCTRL  &kp RSHFT   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo SYM
             // Row 6 — Modifiers + thumbs outer (16)
-            // MAGIC HOME END LEFT RIGHT | BSPC DEL LALT | RALT RET SPACE | UP DOWN ] \ PgDn
-            &magic MAGIC 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT   &kp BSPC  &kp DEL  &kp LALT   &kp RALT  &kp RET  &kp SPACE   &kp UP  &kp DOWN  &kp RBKT  &kp BSLH  &kp PG_DN
+            // MAGIC HOME END LEFT RIGHT | BSPC ESC LALT | RALT RET SPACE | UP DOWN ] \ PgDn
+            &magic MAGIC 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT   &kp BSPC  &kp ESC  &kp LALT   &kp RALT  &kp RET  &kp SPACE   &kp UP  &kp DOWN  &kp RBKT  &kp BSLH  &kp PG_DN
             >;
         };
 

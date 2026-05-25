@@ -98,8 +98,8 @@
             // Row 4 — Home row (12)   DEL  q  s  d  f  g  |  h  j  k  l  m  ù
             &kp DEL        &kp A     &kp S    &kp D     &kp F     &kp G                                        &kp H      &kp J   &kp K    &kp L     &kp SEMI  &kp SQT
             // Row 5 — Alpha bas + thumbs inner (18)
-            // `  z  x  c  v  b  | LSHFT LCTRL NAV/ESC | HYPR RCTRL RSHFT |  n  m  ,  .  /  SYM
-            &kp GRAVE  &kp Z  &kp X  &kp C  &kp V  &kp B   &kp LSHFT  &kp LCTRL  &lt NAV ESC   &mo HYPR  &kp RCTRL  &kp RSHFT   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo SYM
+            // <> z  x  c  v  b  | LSHFT LCTRL NAV/ESC | HYPR RCTRL RSHFT |  n  m  ,  .  /  SYM
+            &kp NON_US_BSLH  &kp Z  &kp X  &kp C  &kp V  &kp B   &kp LSHFT  &kp LCTRL  &lt NAV ESC   &mo HYPR  &kp RCTRL  &kp RSHFT   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo SYM
             // Row 6 — Modifiers + thumbs outer (16)
             // MAGIC HOME END LEFT RIGHT | BSPC ESC LALT | RALT RET SPACE | UP DOWN ] \ PgDn
             &magic MAGIC 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT   &kp BSPC  &kp ESC  &kp LALT   &kp RALT  &kp RET  &kp SPACE   &kp UP  &kp DOWN  &kp RBKT  &kp BSLH  &kp PG_DN

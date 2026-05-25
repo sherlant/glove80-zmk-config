@@ -164,8 +164,8 @@
             &kp LG(F1)  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans  &trans  &trans
             // Row 2 — Workspaces 1-10 via KP (correspond aux code:87..90,83..81,79..81,90)
             &trans  &kp LG(KP_N1)  &kp LG(KP_N2)  &kp LG(KP_N3)  &kp LG(KP_N4)  &kp LG(KP_N5)    &kp LG(KP_N6)  &kp LG(KP_N7)  &kp LG(KP_N8)  &kp LG(KP_N9)  &kp LG(KP_N0)  &trans
-            // Row 3 — Q=terminal  E=thunar  R=rofi
-            &trans  &kp LG(Q)  &trans  &kp LG(E)  &kp LG(R)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            // Row 3 — Q=terminal  E=thunar  R=rofi  I=Shift+Insert (coller presse-papier X11)
+            &trans  &kp LG(Q)  &trans  &kp LG(E)  &kp LG(R)  &trans    &trans  &trans  &kp LS(INS)  &trans  &trans  &trans
             // Row 4 — A=notifs  S=scratchpad  F=fullscreen  J=split  L=lock
             &trans  &kp LG(A)  &kp LG(S)  &trans  &kp LG(F)  &trans    &trans  &kp LG(J)  &trans  &kp LG(L)  &trans  &trans
             // Row 5 — C=kill  V=float  N=rename-ws  P=pseudo

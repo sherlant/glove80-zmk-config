@@ -18,6 +18,8 @@
  *   Row5 pos 0   : GRAVE (²)   Row5 pos 17 : SYM
  *
  * Layer HYPR — maintenir pouce droit + touche :
+ *   F1/F2 = KVM : envoie F14/F13 à l'hôte courant (bascule écran + souris)
+ *   puis passe le clavier sur le profil BT 0 (ce PC) / 1 (autre PC).
  *   Shift/Ctrl sont transparents → Super+Shift+X et Super+Ctrl+X marchent
  *   automatiquement en maintenant les modificateurs physiques.
  */
@@ -79,6 +81,24 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE>, <&bt BT_SEL 3>;
+        };
+        // KVM: tap F13/F14 on the current host (it hands over screen + mouse),
+        // then switch the keyboard itself to the target BT profile.
+        kvm_pc1: kvm_pc1_macro {
+            label = "KVM_PC1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_tap &kp F14>, <&macro_wait_time 300>, <&macro_tap &out OUT_BLE &bt BT_SEL 0>;
+        };
+        kvm_pc2: kvm_pc2_macro {
+            label = "KVM_PC2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_tap &kp F13>, <&macro_wait_time 300>, <&macro_tap &out OUT_BLE &bt BT_SEL 1>;
         };
     };
 
@@ -160,8 +180,8 @@
         //   BSPC-thumb = clipboard (Super+Shift+V)
         hypr_layer {
             bindings = <
-            // Row 1 — F1=aide raccourcis
-            &kp LG(F1)  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans  &trans  &trans
+            // Row 1 — F1=KVM ce PC (BT0)  F2=KVM autre PC (BT1)  F10=aide raccourcis
+            &kvm_pc1  &kvm_pc2  &trans  &trans  &trans                                              &trans  &trans  &trans  &trans  &kp LG(F1)
             // Row 2 — Workspaces 1-10 via KP (correspond aux code:87..90,83..81,79..81,90)
             &trans  &kp LG(KP_N1)  &kp LG(KP_N2)  &kp LG(KP_N3)  &kp LG(KP_N4)  &kp LG(KP_N5)    &kp LG(KP_N6)  &kp LG(KP_N7)  &kp LG(KP_N8)  &kp LG(KP_N9)  &kp LG(KP_N0)  &trans
             // Row 3 — Q=terminal  E=thunar  R=rofi  I=Shift+Insert (coller presse-papier X11)
